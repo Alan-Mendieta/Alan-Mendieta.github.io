@@ -1,0 +1,178 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: rgb(212, 212, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #6ea8ff;
+    border-radius: 5px;
+
+}
+/*contendor principal*/
+.flex-container {
+      width: 100%;
+      max-width: 1000px;
+      min-height: 1000px;
+      margin: 50px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 35px 55px  rgba(0,0,0,0.1);
+}
+
+/*titulo principal*/
+.titulo{
+    height: 200px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    background-color: #6ea8ff;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo h1 {
+    display: flex;
+    margin:auto;
+    position: relative;
+    right: 3%;
+    font-size: 4vw;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.img-perfil img{
+    position: relative;
+    left: 55px;
+    top: 100px;
+    width: 45vh;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+/*lado izquierdo y derecho*/
+
+.lados{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    height: 1000px;
+}
+
+.lado-izquierdo {
+    position: relative;
+    padding-right: 40px;
+    padding-left: 40px;;
+    padding-top: 13vw;
+}
+
+.lado-derecho {
+    position: relative;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.parrafos {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    font-family: 'inter', sans-serif;
+}
+
+.parrafos ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.titulo-h3 {
+    padding-top: 18px;
+    font-family: 'inter', sans-serif;
+    position: relative;
+    top: 18px;
+}
+
+.titulo-h4 {
+    font-family: 'inter', sans-serif;
+    position: relative;
+    top: 18px;
+}
+
+.titulosecu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #6ea8ff;
+    font-size: 2.5vh;
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    margin: 20px;
+    margin:auto;
+    display: flex;
+    font-family: 'League Spartan', sans-serif;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+.accordion_item{
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.accordion_name {
+    padding-bottom: 25px;
+    cursor: pointer;
+    font-family: 'inter', sans-serif;
+    position: relative;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.accordion_content{
+    overflow: hidden;
+    font-family: 'inter', sans-serif;
+    height: 0;
+    transition: .3s height;
+}
+
+.accordion_content::after{
+    content: "";
+    display: block;
+    height: 20px;
+    background-color: transparent;
+}
